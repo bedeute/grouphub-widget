@@ -1,0 +1,36 @@
+*, :after, :before {
+	box-sizing: border-box;
+}
+
+// Links
+// ------------------------------
+a {
+  text-decoration: none;
+  color: $black-rough;
+
+  &:hover,
+  &:focus {
+    color: $main-orange;
+    text-decoration: none;
+  }
+}
+
+// Floats
+// -------------------------
+
+.pull-right {
+	float: right !important;
+}
+.pull-left {
+	float: left !important;
+}
+
+// Paragraph
+// -------------------------
+
+p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  color: $black-mild;
+}
