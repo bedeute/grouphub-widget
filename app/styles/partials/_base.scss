@@ -1,0 +1,10 @@
+// link
+a {
+  color: $darkNavy;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $redOrange;
+  }
+}

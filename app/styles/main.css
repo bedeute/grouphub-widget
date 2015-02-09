@@ -1,0 +1,196 @@
+.moonstone {
+  color: #999; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+a {
+  color: #2e313a;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #f46e35; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 10px 14px;
+  -webkit-transition: all .18s ease-in-out;
+  transition: all .18s ease-in-out; }
+  .btn:hover, .btn:focus {
+    color: #f46e35; }
+
+.btn {
+  background-color: #2e313a;
+  color: #92a5c3;
+  border: 1px solid #353843; }
+  .btn:hover, .btn:focus {
+    background-color: #353843;
+    border-color: #3c3f4b; }
+
+.btn-prefix {
+  display: block;
+  float: left;
+  margin: -8px 12px -8px -12px;
+  padding: 6px 12px 4px;
+  border-right: 1px solid #4b5163; }
+  .btn-prefix-object {
+    max-width: 100%;
+    height: auto; }
+  .btn-prefix ~ strong {
+    display: inline-block;
+    padding-top: 5px; }
+
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333; }
+
+.whole {
+  width: 960px;
+  margin: 20px auto; }
+
+.gmw {
+  margin: 4px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+  .gmw:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    border: 1px solid #ccc;
+    border-radius: 6px; }
+
+.gmw-vertical {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+  .gmw-vertical:before {
+    width: 99.5%;
+    height: 100%;
+    top: 4px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+
+.gmw-horizontal {
+  min-height: 40px; }
+  .gmw-horizontal:before {
+    width: 101.5%;
+    height: 99.5%;
+    left: -0.75%;
+    right: -0.75%;
+    margin-left: auto;
+    margin-right: auto; }
+
+.gmw-head {
+  position: relative;
+  height: 190px; }
+  .gmw-head-content {
+    position: absolute;
+    top: -30px; }
+    .gmw-head-content:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .gmw-head-content-wrap {
+      position: relative;
+      padding-left: 12px;
+      padding-right: 12px;
+      z-index: 2; }
+
+.gmw-footer {
+  border-top: 1px solid #ccc;
+  padding: 16px 12px; }
+
+.gmw-profile-pic {
+  width: 100px;
+  display: block;
+  float: left;
+  margin-right: 12px; }
+  .gmw-profile-pic-object {
+    padding: 3px;
+    background-color: #fafafa;
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ccc; }
+.gmw-profile-text {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+  .gmw-profile-text > span {
+    display: inline-block;
+    color: whitesmoke;
+    margin-bottom: 4px; }
+  .gmw-profile-text > h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: normal;
+    max-height: 54px; }
+
+.gmw-cover-pic {
+  width: 100%;
+  height: 110px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+  .gmw-cover-pic:before {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
+    background-image: -o-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#F2000000', GradientType=0); }
+  .gmw-cover-pic > img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto; }

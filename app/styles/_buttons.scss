@@ -1,0 +1,42 @@
+// base style
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding: 10px 14px;
+  @include transition(all .18s ease-in-out);
+
+
+  &:hover,
+  &:focus {
+    color: $redOrange;
+  }
+}
+
+// coloring
+
+.btn {
+  @include button-variant($darkNavy, lighten($darkNavy, 3%), #92a5c3);
+}
+
+.btn-prefix{
+  display: block;
+  float: left;
+  margin: -8px 12px -8px -12px;
+  padding: 6px 12px 4px;
+  border-right: 1px solid #4b5163;
+
+  &-object {
+    max-width: 100%;
+    height: auto;
+  }
+  & ~ strong {
+    display: inline-block;
+    padding-top: 5px;
+  }
+}

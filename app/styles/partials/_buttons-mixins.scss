@@ -1,0 +1,11 @@
+@mixin button-variant($background, $border, $color){
+  background-color: $background;
+  color: $color;
+  border: 1px solid $border;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($background, 3%);
+    border-color: lighten($border, 3%);
+  }
+}
