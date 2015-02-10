@@ -24,6 +24,22 @@
   @include button-variant($darkNavy, lighten($darkNavy, 3%), #92a5c3);
 }
 
+.btn-s {
+  padding: 6px 8px;
+  font-size: 14px;
+
+  & .btn-prefix{
+    margin: -4px 10px -3px -4px;
+    padding: 4px;
+
+
+    &-object{
+      max-width: 75%;
+
+    }
+  }
+}
+
 .btn-prefix{
   display: block;
   float: left;

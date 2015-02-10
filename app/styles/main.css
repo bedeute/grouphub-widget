@@ -1,4 +1,4 @@
-.moonstone {
+.moonstone, .gmw-horizontal .gmw-head-content > .gmw-profile-text > span {
   color: #999; }
 
 .text-center {
@@ -43,6 +43,15 @@ a {
     background-color: #353843;
     border-color: #3c3f4b; }
 
+.btn-s {
+  padding: 6px 8px;
+  font-size: 14px; }
+  .btn-s .btn-prefix {
+    margin: -4px 10px -3px -4px;
+    padding: 4px; }
+    .btn-s .btn-prefix-object {
+      max-width: 75%; }
+
 .btn-prefix {
   display: block;
   float: left;
@@ -68,14 +77,19 @@ body {
   color: #333; }
 
 .whole {
-  width: 960px;
+  max-width: 960px;
   margin: 20px auto; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto; }
 
 .gmw {
   margin: 4px;
   background-color: #fafafa;
   border: 1px solid #ccc;
   display: block;
+  width: auto;
   position: relative;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
@@ -94,13 +108,22 @@ body {
     border: 1px solid #ccc;
     border-radius: 6px; }
 
+.gmw-inner {
+  display: block;
+  position: relative;
+  padding: 10px; }
+  .gmw-inner:after {
+    content: "";
+    display: table;
+    clear: both; }
+
 .gmw-vertical {
   margin-top: 8px;
   margin-bottom: 8px; }
   .gmw-vertical:before {
     width: 99.5%;
     height: 100%;
-    top: 4px;
+    top: 3px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -109,19 +132,33 @@ body {
 .gmw-horizontal {
   min-height: 40px; }
   .gmw-horizontal:before {
-    width: 101.5%;
+    width: auto;
     height: 99.5%;
-    left: -0.75%;
-    right: -0.75%;
-    margin-left: auto;
-    margin-right: auto; }
+    left: -2px;
+    right: -2px;
+    margin-left: -1px;
+    margin-right: -1px; }
+  .gmw-horizontal .gmw-head-content {
+    position: relative;
+    top: auto;
+    height: 60px; }
+    .gmw-horizontal .gmw-head-content > .gmw-profile-text {
+      height: 52px;
+      overflow: hidden;
+      padding: 0; }
+      .gmw-horizontal .gmw-head-content > .gmw-profile-text > h3 {
+        margin-top: 0px;
+        padding-top: 4px;
+        margin-bottom: 2px; }
+      .gmw-horizontal .gmw-head-content > .gmw-profile-text > span > svg path {
+        fill: #999; }
 
 .gmw-head {
   position: relative;
   height: 190px; }
   .gmw-head-content {
     position: absolute;
-    top: -30px; }
+    top: -36px; }
     .gmw-head-content:after {
       content: "";
       display: table;
@@ -134,10 +171,11 @@ body {
 
 .gmw-footer {
   border-top: 1px solid #ccc;
-  padding: 16px 12px; }
+  padding: 12px; }
 
 .gmw-profile-pic {
   width: 100px;
+  height: 100px;
   display: block;
   float: left;
   margin-right: 12px; }
@@ -158,10 +196,17 @@ body {
   .gmw-profile-text > span {
     display: inline-block;
     color: whitesmoke;
-    margin-bottom: 4px; }
+    font-size: 14px;
+    margin-bottom: 4px;
+    margin-top: 4px; }
+    .gmw-profile-text > span svg {
+      height: 16px;
+      vertical-align: bottom; }
+      .gmw-profile-text > span svg > path {
+        fill: whitesmoke; }
   .gmw-profile-text > h3 {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 12px;
+    margin-bottom: 10px;
     font-weight: normal;
     max-height: 54px; }
 

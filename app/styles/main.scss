@@ -22,8 +22,13 @@ body {
 }
 
 .whole {
-  width: 960px;
+  max-width: 960px;
   margin: 20px auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -32,6 +37,7 @@ body {
   background-color: #fafafa;
   border: 1px solid #ccc;
   display: block;
+  width: auto;
   position: relative;
   border-radius: 4px;
   @include box-sizing(border-box);
@@ -47,6 +53,13 @@ body {
   }
 }
 
+.gmw-inner {
+  display: block;
+  position: relative;
+  padding: 10px;
+  @include clearfix();
+}
+
 .gmw-vertical {
   margin-top:8px;
   margin-bottom:8px;
@@ -54,7 +67,7 @@ body {
   &:before {
     width: 99.5%;
     height: 100%;
-    top: 4px;
+    top: 3px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -66,12 +79,38 @@ body {
   min-height: 40px;
 
   &:before {
-    width: 101.5%;
+    width: auto;
     height: 99.5%;
-    left: -0.75%;
-    right: -0.75%;
-    margin-left: auto;
-    margin-right: auto;
+    left:-2px;
+    right:-2px;
+    margin-left: -1px;
+    margin-right: -1px;
+  }
+
+  & .gmw-head-content {
+    position: relative;
+    top: auto;
+    height: 60px;
+
+    & > .gmw-profile-text {
+      height: 52px;
+      overflow: hidden;
+      padding: 0;
+
+      > h3 {
+        margin-top: 0px;
+        padding-top: 4px;
+        margin-bottom: 2px;
+      }
+
+      > span {
+        @extend .moonstone;
+
+        > svg path {
+          fill: #999;
+        }
+      }
+    }
   }
 }
 
@@ -82,7 +121,7 @@ body {
 
   &-content {
     position: absolute;
-    top:-30px;
+    top:-36px;
     @include clearfix();
 
     &-wrap {
@@ -96,7 +135,7 @@ body {
 
 .gmw-footer {
   border-top: 1px solid #ccc;
-  padding: 16px 12px;
+  padding: 12px;
 }
 
 .gmw-profile {
@@ -104,6 +143,7 @@ body {
 
   &-pic {
     width: 100px;
+    height: 100px;
     display: block;
     float: left;
     margin-right: 12px;
@@ -128,12 +168,24 @@ body {
     & > span {
       display: inline-block;
       color: whitesmoke;
+      font-size: 14px;
       margin-bottom: 4px;
+      margin-top: 4px;
+
+      & svg{
+        height: 16px;
+        vertical-align: bottom;
+
+        > path {
+          fill: whitesmoke;
+        }
+      }
+
     }
 
     & > h3 {
-      margin-top: 8px;
-      margin-bottom: 8px;
+      margin-top: 12px;
+      margin-bottom: 10px;
       font-weight: normal;
       max-height: 54px;
     }
