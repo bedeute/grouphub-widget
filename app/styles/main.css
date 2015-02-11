@@ -130,7 +130,8 @@ body {
     margin-right: auto; }
 
 .gmw-horizontal {
-  min-height: 40px; }
+  min-height: 40px;
+  min-width: 350px; }
   .gmw-horizontal:before {
     width: auto;
     height: 99.5%;
@@ -147,7 +148,7 @@ body {
       overflow: hidden;
       padding: 0; }
       .gmw-horizontal .gmw-head-content > .gmw-profile-text > h3 {
-        margin-top: 0px;
+        margin-top: 2px;
         padding-top: 4px;
         margin-bottom: 2px; }
       .gmw-horizontal .gmw-head-content > .gmw-profile-text > span > svg path {
@@ -157,16 +158,16 @@ body {
   position: relative;
   height: 190px; }
   .gmw-head-content {
-    position: absolute;
-    top: -36px; }
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%; }
     .gmw-head-content:after {
       content: "";
       display: table;
       clear: both; }
     .gmw-head-content-wrap {
+      margin-top: -36px;
       position: relative;
-      padding-left: 12px;
-      padding-right: 12px;
       z-index: 2; }
 
 .gmw-footer {
@@ -192,8 +193,12 @@ body {
     border: 1px solid #ccc; }
 .gmw-profile-text {
   padding-top: 8px;
-  padding-bottom: 8px; }
+  padding-bottom: 8px;
+  overflow: hidden; }
   .gmw-profile-text > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     display: inline-block;
     color: whitesmoke;
     font-size: 14px;
@@ -208,7 +213,7 @@ body {
     margin-top: 12px;
     margin-bottom: 10px;
     font-weight: normal;
-    max-height: 54px; }
+    max-height: 50px; }
 
 .gmw-cover-pic {
   width: 100%;
@@ -234,8 +239,52 @@ body {
   .gmw-cover-pic > img {
     position: absolute;
     width: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    top: -100%;
+    right: -100%;
+    left: -100%;
+    bottom: -100%;
     margin: auto; }
+
+@media only screen and (max-width: 220px) {
+  .gmw-vertical .gmw-head {
+    height: auto; }
+  .gmw-vertical .gmw-head-content {
+    text-align: center;
+    position: relative;
+    top: auto;
+    margin-top: -36px; }
+  .gmw-vertical .gmw-cover-pic {
+    height: 70px; }
+  .gmw-vertical .gmw-profile-pic {
+    display: inline-block;
+    margin: auto;
+    width: 75px;
+    height: 75px;
+    float: none; }
+  .gmw-vertical .gmw-profile-text > span {
+    color: #999;
+    font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    .gmw-vertical .gmw-profile-text > span > svg > path {
+      fill: #999; }
+  .gmw-vertical .gmw-profile-text > h3 {
+    max-height: inherit; }
+  .gmw-vertical .btn > span {
+    display: none; } }
+
+@media (max-width: 350px) and (min-width: 220px) {
+  .gmw-vertical .gmw-head {
+    height: 170px; }
+  .gmw-vertical .gmw-cover-pic > img {
+    width: auto;
+    height: 100%; }
+  .gmw-vertical .gmw-profile-text > span {
+    display: block; }
+  .gmw-vertical .gmw-profile-text > h3 {
+    max-height: 28px; }
+  .gmw-vertical .gmw-profile-pic {
+    width: 75px;
+    height: 75px; } }

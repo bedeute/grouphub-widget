@@ -77,6 +77,7 @@ body {
 
 .gmw-horizontal {
   min-height: 40px;
+  min-width: 350px;
 
   &:before {
     width: auto;
@@ -92,13 +93,14 @@ body {
     top: auto;
     height: 60px;
 
+
     & > .gmw-profile-text {
       height: 52px;
       overflow: hidden;
       padding: 0;
 
       > h3 {
-        margin-top: 0px;
+        margin-top: 2px;
         padding-top: 4px;
         margin-bottom: 2px;
       }
@@ -120,14 +122,14 @@ body {
 
 
   &-content {
-    position: absolute;
-    top:-36px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
     @include clearfix();
 
     &-wrap {
+      margin-top:-36px;
       position: relative;
-      padding-left: 12px;
-      padding-right: 12px;
       z-index: 2;
     }
   }
@@ -164,8 +166,10 @@ body {
   &-text {
     padding-top: 8px;
     padding-bottom: 8px;
+    overflow: hidden;
 
     & > span {
+      @include text-overflow();
       display: inline-block;
       color: whitesmoke;
       font-size: 14px;
@@ -187,7 +191,7 @@ body {
       margin-top: 12px;
       margin-bottom: 10px;
       font-weight: normal;
-      max-height: 54px;
+      max-height: 50px;
     }
   }
 }
@@ -215,10 +219,94 @@ body {
   & > img {
     position: absolute;
     width: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    top: -100%;
+    right: -100%;
+    left: -100%;
+    bottom: -100%;
     margin: auto;
   }
 }
+
+
+// responsive section
+
+@media only screen and (max-width: 220px){
+
+.gmw-vertical {
+
+  .gmw-head {
+    height: auto;
+  }
+
+  .gmw-head-content{
+    text-align: center;
+    position: relative;
+    top: auto;
+    margin-top: -36px;
+  }
+
+  .gmw-cover-pic {
+    height: 70px;
+  }
+
+  .gmw-profile-pic {
+    display: inline-block;
+    margin: auto;
+    width: 75px;
+    height: 75px;
+    float: none;
+  }
+
+  .gmw-profile-text {
+
+    & > span {
+      color: #999;
+      font-weight: normal;
+      margin: 0;
+      @include text-overflow();
+
+      & > svg > path {
+        fill: #999;
+      }
+    }
+
+    & > h3 {
+      max-height: inherit;
+    }
+  }
+
+  .btn {
+
+    > span {display:none;}
+  }
+}
+
+}
+
+@media (max-width:350px) and (min-width:220px) {
+
+.gmw-vertical{
+  .gmw-head{height:170px;}
+
+  .gmw-cover-pic {
+    > img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .gmw-profile-text {
+    > span {
+      display: block;
+    }
+
+    > h3 {max-height: 28px;}
+  }
+
+  .gmw-profile-pic {
+    width: 75px;
+    height: 75px;
+  }
+}
+}
+
