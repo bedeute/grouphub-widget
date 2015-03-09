@@ -118,7 +118,7 @@ body {
 
 .gmw-head {
   position: relative;
-  height: 190px;
+  min-height: 190px;
 
 
   &-content {
@@ -180,7 +180,7 @@ body {
         height: 16px;
         vertical-align: bottom;
 
-        > path {
+        & path {
           fill: whitesmoke;
         }
       }
@@ -191,7 +191,18 @@ body {
       margin-top: 12px;
       margin-bottom: 10px;
       font-weight: normal;
-      max-height: 50px;
+      max-height: 46px;
+      overflow: hidden;
+    }
+
+    & > p {
+      color: #777;
+      font-size: 13px;
+
+      & > svg {
+        height: 14px;
+        margin-bottom: -2px;
+      }
     }
   }
 }
@@ -224,6 +235,34 @@ body {
     left: -100%;
     bottom: -100%;
     margin: auto;
+  }
+}
+
+// Event widget style
+.gmw-event {
+  .gmw-head {
+    min-height: 200px;
+  }
+
+  & .gmw-head-content-wrap {
+    margin-top: -28px;
+
+    .gmw-profile-pic {
+      width: 110px;
+      height: 110px;
+    }
+
+    & .gmw-profile-text {
+      padding: 0;
+
+      & > h3 {
+        margin: 8px auto;
+      }
+
+      & > p {
+        margin: 4px auto;
+      }
+    }
   }
 }
 
@@ -286,7 +325,11 @@ body {
 @media (max-width:350px) and (min-width:220px) {
 
 .gmw-vertical{
-  .gmw-head{height:170px;}
+  .gmw-head{min-height:170px;}
+
+  .gmw-head-content-wrap {
+    margin-top: -28px;
+  }
 
   .gmw-cover-pic {
     > img {
@@ -296,11 +339,16 @@ body {
   }
 
   .gmw-profile-text {
+    padding: 0 0 2px;
+
     > span {
       display: block;
     }
 
-    > h3 {max-height: 28px;}
+    > h3 {
+      max-height: 46px;
+      margin: 12px auto 8px;
+    }
   }
 
   .gmw-profile-pic {
@@ -308,5 +356,37 @@ body {
     height: 75px;
   }
 }
+
+.gmw-event {
+
+  .gmw-head-content {
+    text-align: center;
+  }
+
+  .gmw-profile-pic {
+    float: none;
+    display: inline-block;
+  }
+
+  .gmw-profile-text {
+
+    & > h3 {
+      margin: 12px auto !important;
+    }
+
+    & > span {
+      color: #999;
+
+      svg path {
+        fill: #999;
+      }
+    }
+
+    & > p {
+      margin-bottom: 12px !important;
+    }
+  }
+}
+
 }
 
