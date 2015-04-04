@@ -45,3 +45,12 @@
   -webkit-transition:$arg;
           transition:$arg;
 }
+
+
+// background-size
+@mixin background-size($bg-size){
+  -webkit-background-size: $bg-size;
+     -moz-background-size: $bg-size;
+       -o-background-size: $bg-size;
+          background-size: $bg-size;
+}
