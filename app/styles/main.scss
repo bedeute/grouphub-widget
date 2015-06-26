@@ -137,4 +137,20 @@ body {
   .gmw-list-item-img {
     display: none;
   }
+
+  .gmw-list-item-timestamp {
+
+    top: 0;
+    left: -11px;
+
+    &:before {
+      border-color: #c9c9c9 #c9c9c9 transparent transparent;
+      top: 24px;
+    }
+
+  }
+
+  .gmw-list-item-body {
+    padding-top: 22px;
+  }
 }
